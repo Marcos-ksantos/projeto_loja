@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="/css/style_cadastro.css">
     <script src="js/script.js" defer></script>
 
@@ -13,9 +14,10 @@
 <body>
 
     <main id="geral">
+         
         <header id="cabecalho">
-            <div id="logo">
-                DREZZ
+           <div id="logo">
+                <strong>DREZZ</strong>
             </div>
 
             <nav id="menu">
@@ -49,7 +51,7 @@
                 <input type="text" name="email" id="email" class="tipo-1" maxlength="60" placeholder="Informe seu Email">
 
                 <label for="data">Data de Nascimento</label>
-                <input type="text" name="data" id="data" class="tipo-3" maxlength="60"
+                <input type="date" name="data" id="data" class="tipo-3" maxlength="60"
                     placeholder="Informe sua Data de Nascimento">
                
                 <label for="cep">CEP</label>
@@ -80,11 +82,14 @@
                     placeholder="Informe seu Estado">
                
                 <label for="senha">Senha</label>
-                <input type="text" name="senha" id="senha" class="tipo-1" maxlength="60" placeholder="Informe sua Senha">
+                <input type="password" name="senha" id="senha" class="tipo-3" maxlength="8" placeholder="Informe sua Senha">
                
-               
+               <input type="radio" name="" id="" style="">Você deseja receber notificações?
+
+               <div id="btn">
                 <button type="submit">Cadastrar</button>
                 <button type="reset">Cancelar</button>
+            </div>
             </form>
         </section>
     </main>
