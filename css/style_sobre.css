@@ -1,0 +1,13 @@
+#texto{
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(144, 164, 182);
+}
+h2{
+    text-align: center;
+}
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+}
+
