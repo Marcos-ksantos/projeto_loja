@@ -1,41 +1,52 @@
 @import url(style.css);
 
-#form{
+#form {
     background-color: var(--cor01);
-    width: 100%;
-    max-width: 500px;
+    width: 540px;
     padding: 30px;
     box-sizing: border-box;
-    border: 1px solid var(--cor05, #444); 
+    border-radius: 5px;
     display: block;
+    border: 4px solid;
 }
 
-#cabecalho{
+#cabecalho {
     background-color: rgb(207, 207, 207);
     width: 100%;
     max-width: 540px;
-    border-radius: 8px
-}
-label, input{
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-    font-weight: bold;
-}
-#btn{
-    border-radius: 2px solid var(--cor05);
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px; 
-    margin-top: 10px;
+    border-radius: 6px
 }
 
-.tipo-1{
+label,
+input {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+input {
+    border: 2px solid;
+}
+
+#btn {
+    width: 10px;
+    background-color: rgb(67, 75, 109);
+    border-radius: 6px;
+    display: flex;
+    margin: 10px;
+}
+
+.tipo-1 {
     width: 250px;
 }
-.tipo-2{
+
+.tipo-2 {
     width: 150px;
 }
-.tipo-3{
+
+.tipo-3 {
     width: 120px;
+
 }
