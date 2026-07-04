@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main id="geral">
+        <header id="cabecalho">
+            <div id="logo">
+                DREZZ
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="paginas/cadastro.html">Cadastro</a></li>
+                    <li><a href="paginas/sobre.html">Sobre</a></li>
+                    <li><a href="paginas/login.html">Login</a></li>
+                    <li><a href="paginas/carrinho.html"><img src="imagens/icones/carrinho.png" alt=""></a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id="form-sec">
+
+            <form id="form">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="tipo-1" maxlength="60" placeholder="Informe seu Nome">
+
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" class="tipo-1" maxlength="60"
+                    placeholder="Informe seu Sobrenome">
+               
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="tipo-2" maxlength="11" placeholder="Informe seu CPF">
+               
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" id="telefone" class="tipo-2" maxlength="60"
+                    placeholder="Informe seu Telefone">
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="tipo-1" maxlength="60" placeholder="Informe seu Email">
+
+                <label for="data">Data de Nascimento</label>
+                <input type="text" name="data" id="data" class="tipo-3" maxlength="60"
+                    placeholder="Informe sua Data de Nascimento">
+               
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" class="tipo-3" maxlength="8" placeholder="Informe seu CEP">
+               
+                <label for="logradouro">Logradóuro</label>
+                <input type="text" name="logradouro" id="logradouro" class="tipo-1" maxlength="60"
+                    placeholder="Informe seu Logradóuro">
+               
+                <label for="numero">Número de Endereço</label>
+                <input type="text" name="numero" id="numero" class="tipo-3" maxlength="60"
+                    placeholder="Informe seu Numero de Endereço">
+               
+                <label for="complemento">Complemento</label>
+                <input type="text" name="complemento" id="complemento" class="tipo-1" maxlength="60"
+                    placeholder="Informe seu Complemento">
+               
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" class="tipo-1" maxlength="60"
+                    placeholder="Informe seu Bairro">
+               
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" class="tipo-1" maxlength="60"
+                    placeholder="Informe sua Cidade">
+               
+                <label for="Estado">Estado</label>
+                <input type="text" name="Estado" id="Estado" class="tipo-3" maxlength="60"
+                    placeholder="Informe seu Estado">
+               
+                <label for="senha">Senha</label>
+                <input type="text" name="senha" id="senha" class="tipo-1" maxlength="60" placeholder="Informe sua Senha">
+               
+               
+                <button type="submit">Cadastrar</button>
+                <button type="reset">Cancelar</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
