@@ -6,8 +6,9 @@
 h2{
     text-align: center;
 }
-#cabecalho{
+#cabecalh{
     display: flex;
     justify-content: space-between;
+    
 }
 
