@@ -89,8 +89,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--cor01);
+    border: 2px ;
     border-radius: 6px;
+    box-shadow: 8px 10px rgba(31, 41, 92, 0.603);
 }
 
 .card :hover{
@@ -153,21 +154,21 @@
     border-radius: 6px;
 }
 #menu a:visited{
-    font-size: 2em;
+    font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 5px;
     text-decoration: none;
-    color: #121524;
+    color: #002aff;
 }
 #menu a:hover{
-    font-size: 2em;
+    font-size: 1.0em;
     text-transform: uppercase;
     letter-spacing: 5px;
     text-decoration: none;
     color: #ff0000;
 }
 #menu a:active{
-    font-size: 2em;
+    font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 5px;
     text-decoration: none;
