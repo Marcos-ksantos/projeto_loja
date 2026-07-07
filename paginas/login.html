@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
     <script src="js/script.js" defer></script>
 
     <title>Document</title>
@@ -14,24 +14,25 @@
 
     <main id="geral">
         <header id="cabecalho">
-         
+            <h1>DREZ</h1>
+            <h2>Crie seu cadastro</h2>
         </header>
 
         <form id="cadastro">
 
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" class="tipo-1" placeholder="Informe seu Email">
+            <label for="email">EMAIL</label>
+            <input type="text" name="email" id="email" class="tipo-1" placeholder="Informe seu Email" required>
 
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" class="tipo-2" maxlength="8" placeholder="Informe sua Senha">
+            <label for="senha">SENHA</label>
+            <input type="password" name="senha" id="senha" class="tipo-2" minlength="6" maxlength="10"
+                placeholder="Informe sua Senha" required>
 
-            <button><a href="../index.html">CADASTRAR</a></button>
+                <button><a href="../index.html">CADASTRAR</a></button>
+
+            <p class="cadastro-link">Não possuo cadastro
+                <a href="cadastro.html">Criar conta</a>
+            </p>
         </form>
-
-        <footer id="rodape">
-            <h2>&copy 2026 DREZ - A força da peça está na mente de quem joga.</h2>
-            <p>Formas de pagamento: Pix,Cartões de Débito e Crédito</p>
-        </footer>
     </main>
 
 </body>
