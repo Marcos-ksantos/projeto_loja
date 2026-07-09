@@ -1,1 +1,129 @@
 @import url(../css/style.css);
+
+h1 {
+    text-align: center;
+    color: rgb(91, 113, 133);
+}
+
+/* Formatando SECTION CARRINHO */
+#carrinho {
+    background-color: rgb(195, 211, 230);
+    width: 1000px;
+    min-height: 600px;
+    margin: 20px 0px;
+    padding: 10px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+/* FORMATANDO A SECTION itens-carrinho */
+.itens {
+    background-color: rgb(54, 83, 121);
+    width: 100%;
+    height: 120px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(240, 240, 240);
+    border-bottom: 1px solid black;
+}
+
+.img-itens img {
+    width: 100px;
+    height: 100px;
+}
+
+.descricoes-itens {
+    width: 600px;
+    height: 100px;
+    margin: 20px 0px;
+}
+
+.descricao {
+    width: 100%;
+    height: 40px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.valores{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-item {
+    width: 45px;
+}
+
+.img-remover img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* FORMATANDO DIV-VALORES-CRRINHO */
+#valores-carrinho{
+    width: 30%;
+    height: 600px;
+    margin: 0px 10px;
+    padding: 15px;
+}
+
+#div-cep,
+#div-calc-valor,
+#div-calc-valor-pagar{
+    background-color: rgb(88, 102, 146);
+    width: 100%;
+    min-height: 80px;
+    margin: 20px 0px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 8px;
+}
+
+.titulos-valores-carrinho{
+    margin: 20px;
+    text-transform: uppercase;
+    background-color: rgb(52, 73, 105);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: #91ff00;
+}
+
+.valor {
+    font-size: 1.8em;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-carrinho {
+    width: 280px;
+    height: 80px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+.btn-continuar {
+    background-color: #91ff00;
+}
+
+.btn-finalizar {
+    background-color: aqua;
+}

@@ -175,3 +175,27 @@
     text-decoration: none;
     color: #586d94;
 }
+/* FORMATANDO O MENU DE SEÇÕES */
+#secoes-produtos{
+    width: 100%;
+    min-height: 100px;
+    background-color: #ebebeb;
+    margin: 20px 0px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lnk-secao:link,
+.lnk-secao:visited{
+    text-decoration: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: var(--branca);
+}
+
+.lnk-secao:hover{
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: var(--cor03);
+}
