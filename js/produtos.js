@@ -6,7 +6,7 @@ const sectionCards = document.querySelector('#cards')
 // CARREGANDO CARDS
 const listarProdutos = () => {
 
-    produtos.forEach((Element, i) => {
+    produtos.forEach((elem, i) => {
         const divCard = document.createElement('div')
         divCard.setAttribute('class', 'card')
 
@@ -24,7 +24,7 @@ const listarProdutos = () => {
         btnCard.setAttribute('class', 'btn-add')
         btnCard.innerHTML = 'Adicionar'
 
-        divCard.appendChild(iCard)
+        divCard.appendChild(imgCard)
         divCard.appendChild(pCard)
         divCard.appendChild(h2Card)
         divCard.appendChild(btnCard)

@@ -1,4 +1,4 @@
-export const produtos = [
+const produtos = [
     {
       id_produto: 1,
       descricao_produto: "Camiseta Algodão Básica Preta",
