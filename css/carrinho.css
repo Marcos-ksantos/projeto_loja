@@ -1,15 +1,1 @@
-#cabecario{
-    width: 100%;
-    padding: 0px 20px;
-    display: flex;
-    justify-content:space-between ;
-    background-color: rgb(80, 93, 136);
-}
-#produtos{
-    text-align: center;
-}
-#produtos img{
-    width: 50%;
-    display: flex;
-    justify-content:center;
-}
+@import url(../css/style.css);
