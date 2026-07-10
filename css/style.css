@@ -151,7 +151,6 @@
     letter-spacing: 5px;
     text-decoration: none;
     color: #111111;
-    border: #000000 1px solid;
     border-radius: 6px;
 }
 #menu a:visited{
@@ -179,7 +178,7 @@
 #secoes-produtos{
     width: 100%;
     min-height: 100px;
-    background-color: #ebebeb;
+    background-color: #55658b;
     margin: 20px 0px;
     padding: 20px;
     display: flex;
@@ -193,6 +192,11 @@
    gap: 15px;
    list-style: none;
    font-size: 0.9em;
+   font-weight: bold;
+   padding: 20px;
+ border: 2px solid ;
+ border-radius: 8px;
+ color: #84a1c7;
 }
 
 .lnk-secao:link,
