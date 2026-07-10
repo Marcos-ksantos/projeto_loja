@@ -212,3 +212,29 @@
     text-transform: uppercase;
     color: var(--cor03);
 }
+
+#todos{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 20px;
+  border: 2px solid ;
+  border-radius: 8px;
+  color: #84a1c7;
+ }
+
+.lnk-todos:link,
+.lnk-todos:visited{
+    text-decoration: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: var(--branca);
+}
+
+.lnk-todos:hover{
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: var(--cor03);
+}

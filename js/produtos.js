@@ -5,10 +5,72 @@ const sectionCards = document.querySelector('#cards')
 
 // CARREGANDO CARDS
 const listarProdutos = () => {
+        return produtos
+}
+//CHAMANDO A FUNÇÃO listarProdutos
+listarProdutos()
+
+const lnkProdutos = () => {
+
+        const todosProdutos = document.querySelector('#todos') 
+}
+// MONTANDO OS MENUS SEÇÕES
+const menuSecoes = () => {
+        const mapSecoes = new Map()
+
+        produtos.forEach((elem, i) => {
+                mapSecoes.set(elem.id_secao, elem)
+        })
+
+        const secoesFiltradas = Array.from(mapSecoes.values())
+
+        return secoesFiltradas
+}
+
+// FUNÇÃO PARA INSERIR OS MENUS DA LISTA
+const carregaSecoes = () => {
+        // PEGANDO O ELEMENTO ul menu-secoes DO DOM
+        const ulMenuSecoes = document.querySelector('#menu-secoes')
+
+        // LIMPANDO O ELEMENTO DO DOM]
+        ulMenuSecoes.innerHTML = ''
+
+        // CHAMANDO A FUNÇÃO menuSeções E PERCORRENDO O ARRAY DE SEÇÕES JA SELECIONADOS
+        menuSecoes().forEach((elem, i) => {
+
+                // CRIANDO O ELEMENTO li
+                const liMenu = document.createElement('li')
+
+                // CRIANDO ELEMENTO a  E SEUS ATRIBUTOS
+                const aMenu = document.createElement('a')
+                aMenu.setAttribute('href', '#')
+                aMenu.setAttribute('class', 'lnk-secao')
+                aMenu.innerHTML = elem.secao
+
+                aMenu.addEventListener('click', () => {
+                        montaCards(filtroProduto(elem.id_secao))
+                })
+
+                // ADICIONANDO O a(ELEMENTO FILHO) AO li
+                liMenu.appendChild(aMenu)
+
+                // ADICIONANDO O li(ELEMENTO FILHO) AO ul
+                ulMenuSecoes.appendChild(liMenu)
+        })
+}
+carregaSecoes()
+
+// FUNÇÃO FILTRO PRODUTO
+const filtroProduto = (idSecao) => {
+        return produtos.filter(elem => elem.id_secao === idSecao)
+}
+
+// FUNÇÃO MONTAR CARDS
+const montaCards = (objPtodutos) => {
         // LIMPANDO A SECION cards
         sectionCards.innerHTML = ''
         //PERCORRENDO O ARRAY DE PRODUTOS
-        produtos.forEach((elem, i) => {
+        objPtodutos.forEach((elem, i) => {
                 // CRIANDO O ELEMENTO div E DEFININDO O ATRIBUTO CARD
                 const divCard = document.createElement('div')
                 divCard.setAttribute('class', 'card')
@@ -38,37 +100,4 @@ const listarProdutos = () => {
                 //ADICIONANDO O divCard A SECTION CARDS
                 sectionCards.appendChild(divCard)
         })
-}
-//CHAMANDO A FUNÇÃO listarProdutos
-listarProdutos()
-
-// MONTANDO OS MENUS SEÇÕES
-const menuSecoes = () => {
-        const mapSecoes = new Map()
-
-        produtos.forEach((elem, i) => {
-                mapSecoes.set(elem.id_secao, elem)
-        })
-
-        const secoesFiltradas = Array.from(mapSecoes.values())
-
-        return secoesFiltradas
-}
-
-// FUNÇÃO PARA INSERIR OS MENUS DA LISTA
-const carregaSecoes = () => {
-        const ulMenuSecoes = document.querySelector('#menu-secoes')
-
-        menuSecoes().forEach((elem, i) => {
-
-                const liMenu = document.createElement('li')
-
-                const aMenu = document.createElement('a')
-                aMenu.setAttribute('href', '#')
-                aMenu.setAttribute('class', 'lnk-secao')
-                aMenu.innerHTML = elem.secao
-
-                liMenu.appendChild(aMenu)
-                ulMenuSecoes.appendChild(liMenu)
-        })
-}
+} 
