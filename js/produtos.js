@@ -10,18 +10,6 @@ const listarProdutos = () => {
 //CHAMANDO A FUNÇÃO listarProdutos
 listarProdutos()
 
-<<<<<<< HEAD
-const lnkProdutos = () => {
-
-        const todosProdutos = document.querySelector('#todos') 
-
-        todosProdutos.forEach((elem, i) =>{
-                todosProdutos.createElement
-        })
-
-}
-=======
->>>>>>> 0914a6cd03e647dfbdfe2dcdfa26cf02e40b77f1
 // MONTANDO OS MENUS SEÇÕES
 const menuSecoes = () => {
         const mapSecoes = new Map()
@@ -73,6 +61,16 @@ const filtroProduto = (idSecao) => {
         return produtos.filter(elem => elem.id_secao === idSecao)
 }
 
+//CAPTURANDO A BARRA DE PESQUISA
+ const Pesquisa = document.querySelector('#pesquisa')
+
+Pesquisa.addEventListener('input', (evt)=> {
+        // PEGANDO O VALOR DO INPUT E CONVERTENDO EM MINÚSCULO
+        let txtInput = evt.target.value.toLowerCase()
+// FILTRANDO OS CARDDS APARTIR DO FILTER INCLUDES
+        montaCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
+})
+
 // FUNÇÃO MONTAR CARDS
 const montaCards = (objPtodutos) => {
         // LIMPANDO A SECION cards
@@ -100,6 +98,9 @@ const montaCards = (objPtodutos) => {
                 const btnCard = document.createElement('button')
                 btnCard.setAttribute('class', 'btn-add')
                 btnCard.innerHTML = 'Adicionar'
+                btnCard.addEventListener('click', () =>{
+                        window.location.href = 'paginas/carrinho.html'
+                })
 
                 //ADICIONANDO OS ELEMENTOS FILHOS AOS divCard
                 divCard.appendChild(imgCard)
