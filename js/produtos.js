@@ -13,6 +13,11 @@ listarProdutos()
 const lnkProdutos = () => {
 
         const todosProdutos = document.querySelector('#todos') 
+
+        todosProdutos.forEach((elem, i) =>{
+                todosProdutos.createElement
+        })
+
 }
 // MONTANDO OS MENUS SEÇÕES
 const menuSecoes = () => {
