@@ -10,10 +10,6 @@ const listarProdutos = () => {
 //CHAMANDO A FUNÇÃO listarProdutos
 listarProdutos()
 
-const lnkProdutos = () => {
-
-        const todosProdutos = document.querySelector('#todos') 
-}
 // MONTANDO OS MENUS SEÇÕES
 const menuSecoes = () => {
         const mapSecoes = new Map()
@@ -69,6 +65,7 @@ const filtroProduto = (idSecao) => {
 const montaCards = (objPtodutos) => {
         // LIMPANDO A SECION cards
         sectionCards.innerHTML = ''
+
         //PERCORRENDO O ARRAY DE PRODUTOS
         objPtodutos.forEach((elem, i) => {
                 // CRIANDO O ELEMENTO div E DEFININDO O ATRIBUTO CARD
@@ -99,5 +96,13 @@ const montaCards = (objPtodutos) => {
                 divCard.appendChild(btnCard)
                 //ADICIONANDO O divCard A SECTION CARDS
                 sectionCards.appendChild(divCard)
+
+
         })
-} 
+        const lnkTodos = document.querySelector('.lnk-todos')
+
+        lnkTodos.addEventListener('click', () => {
+                montaCards(produtos)
+        })
+}
+montaCards(produtos)
