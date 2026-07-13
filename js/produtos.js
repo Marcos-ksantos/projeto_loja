@@ -10,6 +10,7 @@ const listarProdutos = () => {
 //CHAMANDO A FUNÇÃO listarProdutos
 listarProdutos()
 
+<<<<<<< HEAD
 const lnkProdutos = () => {
 
         const todosProdutos = document.querySelector('#todos') 
@@ -19,6 +20,8 @@ const lnkProdutos = () => {
         })
 
 }
+=======
+>>>>>>> 0914a6cd03e647dfbdfe2dcdfa26cf02e40b77f1
 // MONTANDO OS MENUS SEÇÕES
 const menuSecoes = () => {
         const mapSecoes = new Map()
@@ -74,6 +77,7 @@ const filtroProduto = (idSecao) => {
 const montaCards = (objPtodutos) => {
         // LIMPANDO A SECION cards
         sectionCards.innerHTML = ''
+
         //PERCORRENDO O ARRAY DE PRODUTOS
         objPtodutos.forEach((elem, i) => {
                 // CRIANDO O ELEMENTO div E DEFININDO O ATRIBUTO CARD
@@ -104,5 +108,13 @@ const montaCards = (objPtodutos) => {
                 divCard.appendChild(btnCard)
                 //ADICIONANDO O divCard A SECTION CARDS
                 sectionCards.appendChild(divCard)
+
+
         })
-} 
+        const lnkTodos = document.querySelector('.lnk-todos')
+
+        lnkTodos.addEventListener('click', () => {
+                montaCards(produtos)
+        })
+}
+montaCards(produtos)
