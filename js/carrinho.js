@@ -17,5 +17,12 @@ const listItens = () => {
   return listaItens
 }
 
+// FUNÇÃO REMOVER ITEM DO ARRAY
+const removeItem = (pos) =>{
+  itensCarrinho.splice(pos, 1)
 
-export { addItem, listItens }
+  sessionStorage.setItem('carrinhoSessao', JSON.stringify
+    (itensCarrinho))
+}
+
+export { addItem, listItens, removeItem }
