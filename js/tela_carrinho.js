@@ -40,12 +40,12 @@ const montaTelaCarrinho = () => {
         inputQuantidade.setAttribute('name', `quant${i}`)
         inputQuantidade.setAttribute('id', `quant${i}`)
         inputQuantidade.setAttribute('class', 'input-item')
-        inputQuantidade.setAttribute('value', 1)
+        inputQuantidade.setAttribute('value', elem.quantidade)
 
         divQuant.appendChild(inputQuantidade)
 
 const pCalc = document.createElement('p')
-pCalc.innerHTML = `R$ ${elem.valor_unitario * 2}`
+pCalc.innerHTML = `R$ ${elem.valor_unitario * 1}`
 
 const imgRemover = document.createElement('img')
 imgRemover.setAttribute('src', '../imagens/icones/lixeira.jpg')
