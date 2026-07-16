@@ -1,4 +1,4 @@
-import { listItens, removeItem, somaTotal, alterarQuantidade , valorPagar } from "./carrinho.js";
+import { listItens, removeItem, somaTotal, alterarQuantidade, valorFrete , valorPagar } from "./carrinho.js";
 
 // MONTAR TELA CARRINHO
 const montaTelaCarrinho = () => {
@@ -39,39 +39,41 @@ const montaTelaCarrinho = () => {
         inputQuantidade.addEventListener('input', () => {
 
             alterarQuantidade(i, Number(inputQuantidade.value));
-        
+
             pCalc.innerHTML =
-            `R$ ${(elem.valor_unitario * Number(inputQuantidade.value))
-                .toFixed(2)
-                .replace('.', ',')}`;
-        
-            valorTotal.innerHTML =
-            `R$ ${somaTotal().toFixed(2).replace('.', ',')}`;
-        
+                `R$ ${(elem.valor_unitario * Number(inputQuantidade.value))
+                    .toFixed(2)
+                    .replace('.', ',')}`;
+
+            divTotal.innerHTML =
+                `R$ ${somaTotal().toFixed(2).replace('.', ',')}`;
+            
         });
-        
+
         inputQuantidade.setAttribute('type', 'number')
         inputQuantidade.setAttribute('name', `quant${i}`)
         inputQuantidade.setAttribute('id', `quant${i}`)
         inputQuantidade.setAttribute('class', 'input-item')
-        inputQuantidade.setAttribute('value', elem.quantidade )
+        inputQuantidade.setAttribute('value', elem.quantidade)
 
         divQuant.appendChild(inputQuantidade)
 
-  
+
         const pCalc = document.createElement('p')
         pCalc.innerHTML = `R$ ${(elem.valor_unitario * elem.quantidade).toFixed(2).replace('.', ',')}`
 
-const pCalc = document.createElement('p')
-pCalc.innerHTML = `R$ ${(elem.valor_unitario * elem.quantidade).toFixed(2).replace('.', ',')}`
-//valores
-const valorTotal = document.querySelector('#valor-total');
-        valorTotal.innerHTML =
-        `R$ ${somaTotal().toFixed(2).replace('.', ',')}`;
+        //valores
+        const divTotal = document.querySelector('#valor-total');
+        divTotal.innerHTML =
+            `R$ ${somaTotal().toFixed(2).replace('.', ',')}`;
 
-        const valorfrete = document.querySelector('#valor-frete');
-        valorfrete.innerHTML =
-        `R$ ${somaTotal().toFixed(2).replace('.', ',')}`;
+            const divFrete = document.querySelector('#valor-frete');
+        divFrete.innerHTML =
+            `R$ ${valorFrete().toFixed(2).replace('.', ',')}`;
+
+        const divPagar = document.querySelector('#valor-final');
+        divPagar.innerHTML =
+            `R$ ${valorPagar().toFixed(2).replace('.', ',')}`;
 
         const imgRemover = document.createElement('img')
         imgRemover.setAttribute('src', '../imagens/icones/lixeira.jpg')

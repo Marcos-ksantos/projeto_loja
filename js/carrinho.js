@@ -53,13 +53,21 @@ const somaTotal = () => {
   
   return soma;
 };
-const valorPagar = () =>{
-  let frete =`R$${(10).toFixed(2).replace('.', ',')}`;
-  let pagar = 0;
-   
-  listItens().forEach((elem) => {
-    pagar += soma + frete;
-});
+
+const valorFrete = () =>{
+let frete = 10
+
+sessionStorage.setItem('carrinhoSessao', JSON.stringify
+(itensCarrinho))
+
+return frete
+
+}
+const valorPagar = ( ) =>{
+
+  const pagar = somaTotal() + valorFrete();
+  
+
 sessionStorage.setItem('carrinhoSessao', JSON.stringify
 (itensCarrinho))
 
@@ -89,4 +97,4 @@ const removeItem = (pos) => {
 
 
  
-export { addItem, listItens, removeItem , somaTotal, alterarQuantidade , valorPagar}
+export { addItem, listItens, removeItem , somaTotal, alterarQuantidade ,valorFrete , valorPagar}
