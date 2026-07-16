@@ -33,12 +33,50 @@ const addItem = (objItem) => {
     (itensCarrinho))
 
 }
-
 const listItens = () => {
-  const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao'))
+  const listaItens =
+      JSON.parse(sessionStorage.getItem("carrinhoSessao")) || [];
 
-  return listaItens
+  return listaItens;
 }
+
+// TENTANDO CRIAR A FUNÇAO DE SOMA TOTAL
+const somaTotal = () => {
+
+  let soma = 0;
+
+  listItens().forEach((elem) => {
+      soma += elem.valor_unitario * elem.quantidade;
+  });
+  sessionStorage.setItem('carrinhoSessao', JSON.stringify
+  (itensCarrinho))
+  
+  return soma;
+};
+const valorPagar = () =>{
+  let frete =`R$${(10).toFixed(2).replace('.', ',')}`;
+  let pagar = 0;
+   
+  listItens().forEach((elem) => {
+    pagar += soma + frete;
+});
+sessionStorage.setItem('carrinhoSessao', JSON.stringify
+(itensCarrinho))
+
+return pagar
+}
+
+const alterarQuantidade = (pos, quantidade) => {
+
+itensCarrinho[pos].quantidade = quantidade;
+
+sessionStorage.setItem(
+    'carrinhoSessao',
+    JSON.stringify(itensCarrinho)
+);
+
+}
+  
 
 // FUNÇÃO REMOVER ITEM DO ARRAY
 const removeItem = (pos) => {
@@ -46,6 +84,9 @@ const removeItem = (pos) => {
 
   sessionStorage.setItem('carrinhoSessao', JSON.stringify
     (itensCarrinho))
-}
 
-export { addItem, listItens, removeItem }
+  }
+
+
+ 
+export { addItem, listItens, removeItem , somaTotal, alterarQuantidade , valorPagar}
