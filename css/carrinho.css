@@ -155,3 +155,9 @@ h1 {
 .btn-finalizar {
     background-color: aqua;
 }
+
+#valor-total{
+    text-align: center;
+    font-size: 1.7em;
+    text-transform: bold;
+}
