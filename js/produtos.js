@@ -1,5 +1,5 @@
 import { produtos } from './lista_produtos.js'
-import {addItem} from './carrinho.js'
+import { addItem } from './carrinho.js'
 
 // PEGANDO ELEMENTOS DO DOM
 const sectionCards = document.querySelector('#cards')
@@ -63,12 +63,12 @@ const filtroProduto = (idSecao) => {
 }
 
 //CAPTURANDO A BARRA DE PESQUISA
- const Pesquisa = document.querySelector('#pesquisa')
+const Pesquisa = document.querySelector('#pesquisa')
 
-Pesquisa.addEventListener('input', (evt)=> {
+Pesquisa.addEventListener('input', (evt) => {
         // PEGANDO O VALOR DO INPUT E CONVERTENDO EM MINÚSCULO
         let txtInput = evt.target.value.toLowerCase()
-// FILTRANDO OS CARDDS APARTIR DO FILTER INCLUDES
+        // FILTRANDO OS CARDDS APARTIR DO FILTER INCLUDES
         montaCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
 })
 
@@ -99,7 +99,7 @@ const montaCards = (objPtodutos) => {
                 const btnCard = document.createElement('button')
                 btnCard.setAttribute('class', 'btn-add')
                 btnCard.innerHTML = 'Adicionar'
-                btnCard.addEventListener('click', () =>{
+                btnCard.addEventListener('click', () => {
                         addItem(elem)
                         window.location.href = 'paginas/carrinho.html'
                 })

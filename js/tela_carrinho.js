@@ -21,7 +21,7 @@ const montaTelaCarrinho = () => {
 
         const divDescricaoItem = document.createElement('div');
         divDescricaoItem.setAttribute('class', 'descricao-item');
-        
+
         const divDescricao = document.createElement('div')
         divDescricao.setAttribute('class', 'descricao-item')
         divDescricao.innerHTML = elem.descricao_produto
@@ -44,39 +44,39 @@ const montaTelaCarrinho = () => {
 
         divQuant.appendChild(inputQuantidade)
 
-const pCalc = document.createElement('p')
-pCalc.innerHTML = `R$ ${(elem.valor_unitario * elem.quantidade).toFixed(2).replace('.', ',')}`
+        const pCalc = document.createElement('p')
+        pCalc.innerHTML = `R$ ${(elem.valor_unitario * elem.quantidade).toFixed(2).replace('.', ',')}`
 
-const imgRemover = document.createElement('img')
-imgRemover.setAttribute('src', '../imagens/icones/lixeira.jpg')
-imgRemover.setAttribute('alt', 'remover')
-imgRemover.setAttribute('class', 'img-remover')
+        const imgRemover = document.createElement('img')
+        imgRemover.setAttribute('src', '../imagens/icones/lixeira.jpg')
+        imgRemover.setAttribute('alt', 'remover')
+        imgRemover.setAttribute('class', 'img-remover')
 
-imgRemover.addEventListener('click', () =>{
-    if(confirm(`Tem certeza que deseja remover ${elem.descricao_produto} do carrinho?`)){
-        removeItemTela(i)
-    }
-})
+        imgRemover.addEventListener('click', () => {
+            if (confirm(`Tem certeza que deseja remover ${elem.descricao_produto} do carrinho?`)) {
+                removeItemTela(i)
+            }
+        })
 
-divValores.appendChild(pItem)
-divValores.appendChild(divQuant)
-divValores.appendChild(pCalc)
-divValores.appendChild(imgRemover)
+        divValores.appendChild(pItem)
+        divValores.appendChild(divQuant)
+        divValores.appendChild(pCalc)
+        divValores.appendChild(imgRemover)
 
-divDescricaoItem.appendChild(divDescricao)
-divDescricaoItem.appendChild(divValores)
+        divDescricaoItem.appendChild(divDescricao)
+        divDescricaoItem.appendChild(divValores)
 
-sectionItem.appendChild(divImgItem)
-sectionItem.appendChild(divDescricaoItem)
+        sectionItem.appendChild(divImgItem)
+        sectionItem.appendChild(divDescricaoItem)
 
-sectionItensCarrinho.appendChild(sectionItem
-    )
+        sectionItensCarrinho.appendChild(sectionItem
+        )
     });
 };
 
-montaTelaCarrinho ()
+montaTelaCarrinho()
 
-const removeItemTela = (pos)=>{
+const removeItemTela = (pos) => {
     removeItem(pos)
 
     montaTelaCarrinho()

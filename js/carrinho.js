@@ -23,10 +23,10 @@ const addItem = (objItem) => {
   const posicao = itensCarrinho.findIndex(elem => elem.id_produto === objItem.id_produto)
 
   if (posicao === -1) {
-  itensCarrinho.push(item(objItem))
+    itensCarrinho.push(item(objItem))
   } else {
     itensCarrinho[posicao].quantidade++
-}
+  }
 
 
   sessionStorage.setItem('carrinhoSessao', JSON.stringify
