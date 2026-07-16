@@ -45,7 +45,7 @@ const montaTelaCarrinho = () => {
         divQuant.appendChild(inputQuantidade)
 
 const pCalc = document.createElement('p')
-pCalc.innerHTML = `R$ ${elem.valor_unitario * 1}`
+pCalc.innerHTML = `R$ ${(elem.valor_unitario * elem.quantidade).toFixed(2).replace('.', ',')}`
 
 const imgRemover = document.createElement('img')
 imgRemover.setAttribute('src', '../imagens/icones/lixeira.jpg')
