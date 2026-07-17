@@ -61,8 +61,14 @@ button{
 }
 button a:visited{
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 button a:hover{
     color: rgb(156, 156, 156);
+    text-transform: none;
+}
+
+.oculto{
+    display: none;
 }

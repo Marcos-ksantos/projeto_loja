@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="/css/style_cadastro.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/cadastro.js" defer></script>
 
     <title>Document</title>
 </head>
@@ -35,7 +35,7 @@
                 <input type="text" name="sobrenome" id="sobrenome" class="tipo-1" maxlength="60"
                     placeholder="Informe seu Sobrenome" required>
                
-                <label for="cpf">CPF</label>
+                <label id="cep" for="cpf">CPF</label>
                 <input type="text" name="cpf" id="cpf" class="tipo-2" maxlength="11" placeholder="Informe seu CPF" required>
                
                 <label for="telefone">Telefone</label>
@@ -51,7 +51,8 @@
                
                 <label for="cep">CEP</label>
                 <input type="text" name="cep" id="cep" class="tipo-3" maxlength="8" placeholder="Informe seu CEP" required>
-               
+
+               <div id="div-enderecos" class="oculto">
                 <label for="logradouro">Logradóuro</label>
                 <input type="text" name="logradouro" id="logradouro" class="tipo-1" maxlength="60"
                     placeholder="Informe seu Logradóuro" required>
@@ -83,7 +84,7 @@
                     <option value="Pe">Pernambuco</option>
                     <option value="Pi">Piauí</option>
                 </select>
-                    
+                </div>    
                
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha" class="tipo-3" maxlength="8" placeholder="Informe sua Senha" required>
