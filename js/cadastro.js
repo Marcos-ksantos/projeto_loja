@@ -45,8 +45,20 @@ const consultaCep = async (cep) => {
     } catch (erro) {
         console.log("ERRO", erro.message)
     }
-}
 
-const carregaInput = (objEndereco) =>{
+    const campos = {
+        logradouro: document.querySelector('#logradouro'),
+        bairro: document.querySelector('#bairro'),
+        localidade: document.querySelector('#localidade'),
+        uf: document.querySelector('#uf')
+    }
     
-}
+    //FUNÇÃO CARREGA INPUTS
+    const carregaInput = (objEndereco)=>{
+        const divEndereco = document.querySelector('#div-dados-endereco')
+        divEndereco.classList.remove('oculto')
+        for(let campo in objEndereco){
+            campos[campo].value = objEndereco[campo]
+            campos[campo].disabled = true
+        }
+    }
